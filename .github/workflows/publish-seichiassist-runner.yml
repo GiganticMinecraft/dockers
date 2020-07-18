@@ -1,8 +1,10 @@
-name: Build and publish docker image
+name: Build and publish seichiassist-runner docker image
 on:
   push:
     branches:
       - master
+    paths:
+      - 'SeichiAssist/runner/**'
 
 jobs:
   build:
