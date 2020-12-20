@@ -4,7 +4,7 @@ on:
     branches:
     - master
     paths:
-    - 'SeichiAssist/runner/**' 
+    - 'seichiassist-runner/**' 
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         id: docker
         with:
           IMAGE_NAME: 'seichiassist-runner'
-          DOCKERFILE_PATH: './SeichiAssist/runner/Dockerfile'
-          BUILD_CONTEXT: './SeichiAssist/runner'
+          DOCKERFILE_PATH: './seichiassist-runner/Dockerfile'
+          BUILD_CONTEXT: './seichiassist-runner'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
