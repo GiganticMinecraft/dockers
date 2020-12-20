@@ -1,0 +1,26 @@
+name: Build and publish bungeesemaphore-redis-dev docker image
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'bungeesemaphore-redis-dev/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+        with:
+          submodules: recursive
+
+      - name: Publish Docker Image to GPR
+        uses: machine-learning-apps/gpr-docker-publish@master
+        id: docker
+        with:
+          IMAGE_NAME: 'bungeesemaphore-redis-dev'
+          DOCKERFILE_PATH: './bungeesemaphore-redis-dev/Dockerfile'
+          BUILD_CONTEXT: './bungeesemaphore-redis-dev'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
