@@ -1,4 +1,4 @@
-FROM adoptopenjdk:8u242-b08-jdk
+FROM adoptopenjdk:8u242-b08-jdk-hotspot
 
 RUN apt-get update
 RUN apt-get install nkf
