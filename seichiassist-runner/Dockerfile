@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM adoptopenjdk:8u242-b08-jdk
 
 RUN apt-get update
 RUN apt-get install nkf
