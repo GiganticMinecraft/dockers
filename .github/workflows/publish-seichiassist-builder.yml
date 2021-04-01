@@ -5,7 +5,7 @@ on:
     - master
     paths:
     - 'seichiassist-builder/**'
-    - '.github/workflows/publish-seichiassist-builder'
+    - '.github/workflows/publish-seichiassist-builder.yml'
 
 jobs:
   build-and-push:
