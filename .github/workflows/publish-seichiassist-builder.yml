@@ -41,7 +41,11 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./seichiassist-builder
+          builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: |
             ${{ steps.prepare_image_id.outputs.lowercase_id }}:latest
             ${{ steps.prepare_image_id.outputs.lowercase_id }}:${{ steps.prepare_image_id.outputs.short-ref }}
+          cache-from: type=gha
+          # すべてのビルドステージのすべてのレイヤーをキャッシュして欲しいのでmode=max
+          cache-to: type=gha,mode=max
