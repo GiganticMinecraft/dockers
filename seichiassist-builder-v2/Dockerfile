@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.7_7-jdk-jammy
+FROM eclipse-temurin:17.0.7_7-jdk-focal
 
 # sbt をインストールする (https://www.scala-sbt.org/1.x/docs/ja/Installing-sbt-on-Linux.html)
 RUN apt-get update && apt-get install -y apt-transport-https curl gnupg
@@ -13,6 +13,3 @@ RUN apt-get update && apt-get install -y sbt=1.9.0
 
 # sbt launcherがsbtをDLしてくれる
 RUN sbt --version
-
-# eclipse-temurin にはgitがインストールされておらず、CIの利用には不便
-RUN apt-get install -y git
