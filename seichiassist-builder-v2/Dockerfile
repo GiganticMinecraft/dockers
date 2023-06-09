@@ -15,4 +15,5 @@ RUN apt-get update && apt-get install -y sbt=1.9.0
 RUN sbt --version
 
 # eclipse-temurin にはgitがインストールされておらず、CIの利用には不便
-RUN apt-get install -y git
+# 新しいGitを使うとCIがこける
+RUN apt-get install -y git=2.25.1
