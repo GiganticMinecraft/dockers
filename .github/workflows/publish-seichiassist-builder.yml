@@ -2,7 +2,7 @@ name: Build and publish seichiassist-builder docker image
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - 'seichiassist-builder/**'
     - '.github/workflows/publish-seichiassist-builder.yml'
@@ -16,7 +16,7 @@ jobs:
     # 参考: https://qiita.com/kawakawaryuryu/items/b0291c1bc1141a535263
     steps:
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           submodules: recursive
 

@@ -2,7 +2,7 @@ name: Build and publish bungeesemaphore-redis-dev docker image
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - 'bungeesemaphore-redis-dev/**'
     - '.github/workflows/publish-bungeesemaphore-redis-dev.yml'
@@ -16,7 +16,7 @@ jobs:
     # 参考: https://qiita.com/kawakawaryuryu/items/b0291c1bc1141a535263
     steps:
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           submodules: recursive
 
