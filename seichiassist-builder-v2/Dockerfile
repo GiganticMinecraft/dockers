@@ -9,7 +9,7 @@ RUN curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E4
     | gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/scalasbt-release.gpg --import
 RUN chmod 644 /etc/apt/trusted.gpg.d/scalasbt-release.gpg
 
-RUN apt-get update && apt-get install -y sbt=1.9.0
+RUN apt-get update && apt-get install -y sbt=1.9.0 git
 
 # sbt launcherがsbtをDLしてくれる
 RUN sbt --version
