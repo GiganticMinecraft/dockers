@@ -1,4 +1,4 @@
-FROM mikefarah/yq:4.40.5 as yq
+FROM mikefarah/yq:4.40.7 as yq
 FROM adoptopenjdk:8u282-b08-jdk-hotspot
 
 RUN apt-get update && apt-get install nkf \
