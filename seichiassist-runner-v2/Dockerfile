@@ -1,4 +1,4 @@
-FROM mikefarah/yq:4.44.6 as yq
+FROM mikefarah/yq:4.45.1 as yq
 FROM eclipse-temurin:17.0.13_11-jdk-jammy
 
 RUN apt-get update && apt-get install nkf \
