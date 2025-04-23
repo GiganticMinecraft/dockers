@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.14_7-jdk-focal
+FROM eclipse-temurin:17.0.15_6-jdk-focal
 
 # sbt をインストールする (https://www.scala-sbt.org/1.x/docs/ja/Installing-sbt-on-Linux.html)
 RUN apt-get update && apt-get install -y apt-transport-https curl gnupg
