@@ -1,4 +1,4 @@
-FROM redis:7.4.5
+FROM redis:8.0.3
 
 COPY redis.conf /usr/local/etc/redis/redis.conf
 
