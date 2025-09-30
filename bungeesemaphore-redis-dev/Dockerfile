@@ -1,4 +1,4 @@
-FROM redis:8.2.1
+FROM valkey/valkey:8.0-trixie
 
 COPY redis.conf /usr/local/etc/redis/redis.conf
 
