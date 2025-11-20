@@ -1,6 +1,10 @@
+# syntax=docker/dockerfile:1
 FROM mikefarah/yq:4.48.2 as yq
-FROM eclipse-temurin:17.0.17_10-jdk-jammy
+FROM eclipse-temurin:17.0.17_10-jdk-noble
 
-RUN apt-get update && apt-get install nkf \
-    && rm -rf /var/lib/apt/lists/*
+RUN \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    apt-get update && apt-get install -y --no-install-recommends \
+    nkf
 COPY --from=yq /usr/bin/yq /usr/bin/yq
