@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM mikefarah/yq:4.49.1 as yq
+FROM mikefarah/yq:4.50.1 as yq
 FROM eclipse-temurin:17.0.17_10-jdk-noble
 
 RUN \
