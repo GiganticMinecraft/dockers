@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 FROM mikefarah/yq:4.54.3 as yq
-FROM eclipse-temurin:17.0.21_9-jdk-noble
+FROM eclipse-temurin:17.0.21.1_2-jdk-noble
 
 RUN \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
