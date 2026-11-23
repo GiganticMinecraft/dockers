@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM eclipse-temurin:17.0.21_9-jdk-noble
+FROM eclipse-temurin:17.0.21.1_2-jdk-noble
 
 # sbt をインストールする (https://www.scala-sbt.org/1.x/docs/ja/Installing-sbt-on-Linux.html)
 RUN \
